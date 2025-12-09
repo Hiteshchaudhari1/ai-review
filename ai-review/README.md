@@ -1,19 +1,14 @@
-# AI review plugin for Gerrit Code Review
+I want to provide an hardcoded implementation to the Plugin API - `ai-code-review.ts`
 
-SAP-AI-Review plugin exposes an API which would help code reviewers to get the
-insights about the code review of the current change.
+The problem I am facing is: Since the AiCodeReview API is not available in the standardize npm module, 
+I cannot simply add a dependancy on "@plugins_npm//@gerritcodereview/typescript-api".
 
-# How To Build
+I have provided a small hardcoded impl. to `AiCodeReview API` in `ai-code-review-impl.ts`
 
-For building sap-ai-review plugin: 
+I want to use the experimental feature of AI chat introduced by Ben Rohlf: https://gerrit-review.googlesource.com/c/gerrit/+/522821
 
-    bazel build //plugins/sap-ai-review:ai-review
+Feature is behind toggle:
 
-For running unit tests execute:
-
-    bazel build //plugins/sap-ai-review:sap-ai-review_tests
-
-
-
-
+[experiments]
+	enabled = UiFeature__enable_ai_chat
 
