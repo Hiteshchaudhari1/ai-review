@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig-plugins-base.json",
+  "compilerOptions": {
+    "rootDir": "../../..",
+    "outDir": "../../../.ts-out/plugins/sap-ai-review/web"
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
